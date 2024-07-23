@@ -21,7 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 slide.classList.add("right");
             }
         });
-        const progressBars = document.querySelectorAll(".progress-bar");
+
+        // Scroll the year slider to keep the active year centered
+        const activeYear = document.querySelector(".year-slider span.active");
+        const yearSlider = document.querySelector(".year-slider");
+        yearSlider.style.transform = `translateX(${-(activeYear.offsetLeft - (yearSlider.offsetWidth / 2) + (activeYear.offsetWidth / 2))}px)`;
+    
+    
+    const progressBars = document.querySelectorAll(".progress-bar");
     progressBars.forEach((bar, i) => {
         const correspondingYearSpan = yearSpans[i];
         bar.style.width = `${correspondingYearSpan.offsetWidth}px`;
@@ -39,12 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
             bar.style.opacity = "0.5";
         }
     })
-
-        // Scroll the year slider to keep the active year centered
-        const activeYear = document.querySelector(".year-slider span.active");
-        const yearSlider = document.querySelector(".year-slider");
-        yearSlider.style.transform = `translateX(${-(activeYear.offsetLeft - (yearSlider.offsetWidth / 2) + (activeYear.offsetWidth / 2))}px)`;
-    
     // Remove the active class from other progress bars
     document.querySelectorAll(".progress-bar").forEach((bar) => {
         if (bar !== progressBar) {
