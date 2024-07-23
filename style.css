@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.spacer{
+    height: 20px;
+}
+
+.carousel-container {
+    width: 1000px;
+    height: 800px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.carousel {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+img {
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 1;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+    
+}
+
+.carousel-slide.left {
+    transform: translateX(-150%);
+    opacity: 0.4;
+}
+
+.carousel-slide.right {
+    transform: translateX(50%);
+    opacity: 0.4;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    overflow: visible;
+}
+
+.prev, .next {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    color: darkslategray;
+    font-size: 40px;
+    margin-inline: 20%;
+    top: 220px; /* Center vertically */
+    transform: translateX(+100%) translateY(-50%); /* Adjust for button height */
+    z-index: 10;
+    background: none;
+    outline: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.year-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 1;
+    overflow-x:visible;
+    scroll-behavior: smooth;
+}
+
+.year-slider span {
+    padding: 10px 100px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+}
+
+.year-slider span.active {
+    font-weight: bold;
+    opacity: 1;
+    color: purple;
+    align-items: center;
+}
+
+
+
+.text-descriptions p {
+    display: none;
+}
+
+.text-descriptions p.active {
+    display: block;
+}
+
+
+.progress-bar {
+    position: absolute;
+    bottom: 2px;
+    height: 2px;
+    width: 45px;
+    background-color: #f40202;
+    opacity: 0.5;
+    transition: width 0.3s, opacity 0.3s;
+}
+.progress-bar .active{
+    opacity: 1;
+    background-color: purple;
+    transition: opacity 0.3s;
+}
