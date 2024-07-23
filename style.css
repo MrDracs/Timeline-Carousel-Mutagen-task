@@ -9,12 +9,14 @@ body {
 }
 
 .carousel-container {
-    width: 1000px;
+    width: 90%;
     height: 800px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin: auto;
     text-align: center;
     overflow: hidden;
+    align-items: center;
+    align-content: top;
+    
     
 }
 
@@ -27,9 +29,10 @@ body {
 }
 
 img {
-    width: 600px;
+    display: flex;
+    width: auto;
     height: 350px;
-    border-radius: 20px;
+    border-radius: 10%;
 }
 
 .carousel-slide {
@@ -71,14 +74,13 @@ img {
 
 .prev, .next {
     border: none;
-    padding: 10px;
     cursor: pointer;
     position: absolute;
     color: darkslategray;
     font-size: 40px;
-    margin-inline: 20%;
+    margin-inline: auto;
     top: 220px; /* Center vertically */
-    transform: translateX(+100%) translateY(-50%); /* Adjust for button height */
+    transform: translateY(-50%); /* Adjust for button height */
     z-index: 10;
     background: none;
     outline: none;
