@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-image: url("assets/bg.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:100% 100%;
 }
 .spacer{
     height: 20px;
@@ -10,7 +10,7 @@ body {
 
 .carousel-container {
     width: 90%;
-    height: 800px;
+    height: 50%;
     margin: auto;
     text-align: center;
     overflow: hidden;
@@ -31,7 +31,7 @@ body {
 img {
     display: flex;
     width: auto;
-    height: 350px;
+    height: 50vb;
     border-radius: 10%;
 }
 
